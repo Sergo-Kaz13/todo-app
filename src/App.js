@@ -1,24 +1,82 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, lazy, useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import useFetch from "./useFetch";
+
+import style from "./App.module.css";
+import Menu from "./components/Menu/Menu";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import RegistrationPage from "./components/RegistrationPage/RegistrationPage";
+
+const Home = lazy(() => import("./components/Home/Home"));
+const About = lazy(() => import("./components/About/About"));
+const Todos = lazy(() => import("./components/Totos/Todos"));
+const Todo = lazy(() => import("./components/Todo/Todo"));
+const NotFound = lazy(() => import("./components/NotFound/NotFound"));
+const LoginPage = lazy(() => import("./components/LoginPage/LoginPage"));
 
 function App() {
+  const [userItem, setUserItem] = useState("");
+  const [userItems, setUserItems] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const { data, isLoading, error } = useFetch("http://localhost:3030/items");
+
+  useEffect(() => {
+    setUserItems(data);
+  }, [data]);
+
+  useEffect(() => {
+    const isAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated"));
+
+    if (isAuthenticated) {
+      setIsAuthenticated(isAuthenticated);
+    }
+  }, [isAuthenticated]);
+
+  if (isLoading) return <p className={style.loader}>Loading...</p>;
+
+  if (error) return <p>Error: {error.message}</p>;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu />
+      <div className={style.wrapper}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route
+              path="/registration"
+              element={
+                <RegistrationPage setIsAuthenticated={setIsAuthenticated} />
+              }
+            />
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/todos"
+              element={
+                <PrivateRoute isAuthenticated={isAuthenticated}>
+                  <Todos
+                    userItem={userItem}
+                    setUserItem={setUserItem}
+                    userItems={userItems}
+                    setUserItems={setUserItems}
+                  />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/todo/:id"
+              element={
+                <Todo userItems={userItems} setUserItems={setUserItems} />
+              }
+            />
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404" replace />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </>
   );
 }
 

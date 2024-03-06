@@ -1,0 +1,11 @@
+.itemsBlock {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  border-top: 1px solid #efefef;
+}
+
+.itemsBlock li:nth-child(odd) {
+  background: #f0f9ff;
+}

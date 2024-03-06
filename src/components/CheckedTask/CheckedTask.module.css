@@ -1,0 +1,14 @@
+.checkedTask {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 2px solid #efefef;
+  color: #499cc1;
+}
+
+.checkedItems,
+.numbersItems {
+  margin: 0 5px;
+}

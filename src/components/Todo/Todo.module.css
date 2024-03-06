@@ -1,0 +1,28 @@
+.blockEdit {
+  display: flex;
+  gap: 10px;
+}
+
+.inputEdit {
+  padding: 5px;
+  width: 100%;
+  border: 2px solid #499cc1;
+  color: #499cc1;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.btnSave {
+  text-decoration: none;
+  color: #fff;
+  background: #499cc1;
+  border: 1px solid #499cc1;
+  border-radius: 5px;
+  padding: 0 10px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnSave:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.btnRemoveChecked {
+  border: none;
+  background: #499cc1;
+  padding: 7px 15px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnRemoveCheckedMod {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.btnRemoveChecked:hover {
+  cursor: pointer;
+}

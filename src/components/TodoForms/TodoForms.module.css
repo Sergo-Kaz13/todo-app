@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  gap: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.todoInput {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #499cc1;
+  outline: none;
+}
+
+.btnAddItem {
+  width: 45px;
+  color: #fefefe;
+  font-size: 18px;
+  font-weight: bold;
+  background: #499cc1;
+  border: 1px solid #499cc1;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnAddItem:hover {
+  cursor: pointer;
+  background: rgba(73, 156, 193, 0.7);
+}
+
+.btnAddItem:active {
+  transform: translate(-1px, 1px);
+}

@@ -1,0 +1,73 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  border-bottom: 1px solid #efefef;
+}
+
+.contentBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemChecked {
+  width: 15px;
+  height: 15px;
+  transition: all ease-in-out 0.28s;
+}
+
+.itemChecked:hover {
+  cursor: pointer;
+}
+
+.itemText {
+  color: #499cc1;
+  font-weight: 600;
+}
+
+.btnBlock {
+  display: flex;
+  gap: 10px;
+}
+
+.btnEdit,
+.btnRemove {
+  border: none;
+  background: none;
+  color: #cee5f2;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnRemove {
+  font-size: 18px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnEdit:hover,
+.btnRemove:hover {
+  cursor: pointer;
+}
+
+.btnRemoveDisabled:hover {
+  cursor: default;
+}
+
+.editInput {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #499cc1;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btnSaveEdit {
+  border: none;
+  background: transparent;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnSaveEdit:hover {
+  cursor: pointer;
+}

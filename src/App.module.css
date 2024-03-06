@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fcfcfc;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 150px;
+  padding: 10px;
+}
+
+.todoTitle {
+  color: #555555;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.interaction {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loader {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
