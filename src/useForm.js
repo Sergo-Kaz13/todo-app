@@ -11,7 +11,7 @@ const useForm = (initialValues, registrationNewUser, setIsAuthenticated) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     registrationNewUser(values);
-    setIsAuthenticated(true);
+    setIsAuthenticated((prev) => !prev);
   };
   return { values, handleChange, handleSubmit };
 };

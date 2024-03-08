@@ -36,3 +36,19 @@ export const registrationNewUser = async (user) => {
     throw new Error(error);
   }
 };
+
+export const getUsers = async (verifyUser, formLoginValues) => {
+  try {
+    const response = await axios.get("http://localhost:3030/users");
+    const users = response.data;
+
+    if (users.length === 0) {
+      alert("The user is not registered!!!");
+      return;
+    }
+
+    verifyUser(users, formLoginValues);
+  } catch (error) {
+    throw new Error(error);
+  }
+};

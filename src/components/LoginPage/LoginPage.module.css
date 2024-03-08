@@ -1,0 +1,42 @@
+.blockForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.form input {
+  width: 100%;
+  padding: 5px;
+}
+
+.form button,
+.btnRegistration {
+  padding: 5px;
+  border: none;
+  background: #499cc1;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.28s;
+}
+
+.btnRegistration {
+  padding: 3px 5px;
+  font-size: 14px;
+  background: #fff;
+  color: #499cc1;
+  border: 2px solid #499cc1;
+}
+
+.form button:hover,
+.btnRegistration:hover {
+  cursor: pointer;
+}
