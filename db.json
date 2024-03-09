@@ -1,26 +1,68 @@
 {
   "items": [
     {
-      "id": "91db",
-      "value": "молоко",
-      "checked": true
-    },
-    {
-      "id": "325a",
-      "value": "подивитися фільм",
-      "checked": false
-    },
-    {
       "id": "bd69",
-      "value": "Подивитися серіал \"Аватар\"",
-      "checked": false
+      "value": "Подивитися серіал \"Аватар\" Lol",
+      "checked": true
     },
     {
       "id": "7481",
       "value": "Сходити з Танею на фільм \"Дюна 2\"",
       "checked": false
+    },
+    {
+      "id": "6439",
+      "value": "Подивитися серіал \"Сегун\"",
+      "checked": false
+    },
+    {
+      "id": "9d75",
+      "value": "Подивитися аніме",
+      "checked": false
     }
   ],
   "users": [
+    {
+      "id": "eb90",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "ada3",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "13ef",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "7462",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "3c25",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "fd7c",
+      "name": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "6df9",
+      "name": "",
+      "email": "",
+      "password": ""
+    }
   ]
 }

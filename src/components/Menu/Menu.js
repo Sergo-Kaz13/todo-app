@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 
 import style from "./Menu.module.css";
 
-const Menu = ({ isAuthenticated, setIsAuthenticated }) => {
+const Menu = () => {
+  const { isAuthenticated, setIsAuthenticated } = useContext(MyIsAuthenticated);
+
   const linkActive = ({ isActive }) => ({
     textDecoration: isActive ? "underline" : "",
     fontWeight: isActive ? "bold" : "",

@@ -2,6 +2,8 @@ import { Suspense, lazy, useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import useFetch from "./useFetch";
 
+import { MyIsAuthenticated } from "./context/MyIsAuthenticated";
+
 import style from "./App.module.css";
 import Menu from "./components/Menu/Menu";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -19,6 +21,17 @@ function App() {
   const [userItems, setUserItems] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [toggleAuthentication, setToggleAuthentication] = useState(false);
+
+  const contextValue = {
+    isAuthenticated,
+    setIsAuthenticated,
+    toggleAuthentication,
+    setToggleAuthentication,
+    userItem,
+    setUserItem,
+    userItems,
+    setUserItems,
+  };
 
   const { data, isLoading, error } = useFetch("http://localhost:3030/items");
 
@@ -40,11 +53,8 @@ function App() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <>
-      <Menu
-        isAuthenticated={isAuthenticated}
-        setIsAuthenticated={setIsAuthenticated}
-      />
+    <MyIsAuthenticated.Provider value={contextValue}>
+      <Menu />
       <div className={style.wrapper}>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
@@ -52,41 +62,27 @@ function App() {
             <Route
               path="/todos"
               element={
-                <PrivateRoute isAuthenticated={isAuthenticated}>
-                  <Todos
-                    userItem={userItem}
-                    setUserItem={setUserItem}
-                    userItems={userItems}
-                    setUserItems={setUserItems}
-                  />
+                <PrivateRoute>
+                  <Todos />
                 </PrivateRoute>
               }
             />
             <Route
               path="/authentication"
               element={
-                <AnonymousRoute isAuthenticated={isAuthenticated}>
-                  <Authentication
-                    toggleAuthentication={toggleAuthentication}
-                    setToggleAuthentication={setToggleAuthentication}
-                    setIsAuthenticated={setIsAuthenticated}
-                  />
+                <AnonymousRoute>
+                  <Authentication />
                 </AnonymousRoute>
               }
             />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/todo/:id"
-              element={
-                <Todo userItems={userItems} setUserItems={setUserItems} />
-              }
-            />
+            <Route path="/todo/:id" element={<Todo />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<Navigate to="/404" replace />} />
           </Routes>
         </Suspense>
       </div>
-    </>
+    </MyIsAuthenticated.Provider>
   );
 }
 

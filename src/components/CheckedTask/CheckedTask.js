@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 import style from "./CheckedTask.module.css";
 
-const CheckedTask = ({ userItems }) => {
+const CheckedTask = () => {
+  const { userItems } = useContext(MyIsAuthenticated);
+
   const [checkedItems, setCheckedItems] = useState(0);
   const [filling, setFilling] = useState(0);
   const scale = {

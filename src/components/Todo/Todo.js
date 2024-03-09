@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 
 import style from "./Todo.module.css";
 
-const Todo = ({ userItems, setUserItems }) => {
+const Todo = () => {
+  const { userItems, setUserItems } = useContext(MyIsAuthenticated);
+
   const { id } = useParams();
   const userItem = userItems.find((item) => item.id === id);
 

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 import LoginPage from "../LoginPage/LoginPage";
 import RegistrationPage from "../RegistrationPage/RegistrationPage";
 
-const Authentication = ({
-  toggleAuthentication,
-  setToggleAuthentication,
-  setIsAuthenticated,
-}) => {
+const Authentication = () => {
+  const { setIsAuthenticated, toggleAuthentication, setToggleAuthentication } =
+    useContext(MyIsAuthenticated);
+
   return (
     <div>
       {!toggleAuthentication ? (

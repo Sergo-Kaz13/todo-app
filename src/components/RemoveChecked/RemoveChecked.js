@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { deleteData } from "../../api";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 import style from "./RemoveChecked.module.css";
 
-const RemoveChecked = ({ userItems, setUserItems }) => {
+const RemoveChecked = () => {
+  const { userItems, setUserItems } = useContext(MyIsAuthenticated);
+
   const removeCheckedItems = () => {
     const removeItemId = [];
     userItems.forEach((item) => {
