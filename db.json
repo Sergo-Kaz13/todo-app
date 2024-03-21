@@ -1,118 +1,65 @@
 {
   "items": [
     {
-      "id": "4cda",
-      "value": "пожарити яйця",
-      "checked": true
-    },
-    {
-      "id": "91db",
-      "value": "молоко",
-      "checked": false
-    },
-    {
-      "id": "325a",
-      "value": "подивитися фільм",
-      "checked": false
-    },
-    {
       "id": "bd69",
-      "value": "Подивитися серіал \"Аватар\"",
-      "checked": false
+      "value": "Подивитися серіал \"Аватар\" Lol",
+      "checked": true
     },
     {
       "id": "7481",
       "value": "Сходити з Танею на фільм \"Дюна 2\"",
       "checked": false
+    },
+    {
+      "id": "6439",
+      "value": "Подивитися серіал \"Сегун\"",
+      "checked": false
+    },
+    {
+      "id": "9d75",
+      "value": "Подивитися аніме",
+      "checked": false
     }
   ],
   "users": [
     {
-      "id": "5825",
-      "name": "Sergo_Kaz",
-      "email": "fenrill1366613@gmail.com",
-      "password": "dfafwfwfwdsfae"
+      "id": "eb90",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "344b",
-      "name": "Stepan",
-      "email": "fenrill1366613@gmail.com",
-      "password": "afsfwfowjk;kadnf"
+      "id": "ada3",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "905a",
-      "name": "Sergo",
-      "email": "fenrill1366613@gmail.com",
-      "password": "sadfewojfownf"
+      "id": "13ef",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "838f",
-      "name": "Sergo_Kaz",
-      "email": "fenrill1366613@gmail.com",
-      "password": "afsfwfwwfw"
+      "id": "7462",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "d5fc",
-      "name": "Sergo_Kaz",
-      "email": "fenrill1366613@gmail.com",
-      "password": "afsfwfwwfw"
+      "id": "3c25",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "86d1",
-      "name": "Sergo_Kaz",
-      "email": "fenrill1366613@gmail.com",
-      "password": "afsfwfwwfw"
+      "id": "fd7c",
+      "name": "",
+      "email": "",
+      "password": ""
     },
     {
-      "id": "ff11",
-      "name": "Sergo_Kaz",
-      "email": "Oksana190713@ukr.net",
-      "password": "івацацацуац"
-    },
-    {
-      "id": "5ff4",
-      "name": "Sergo_Kaz",
-      "email": "13fenrill13666@gmail.com",
-      "password": "sdfaewfwfs"
-    },
-    {
-      "id": "9d40",
-      "name": "Sergo_Kaz",
-      "email": "13fenrill13666@gmail.com",
-      "password": "sdfaewfwfs"
-    },
-    {
-      "id": "7f46",
-      "name": "Sergo_Kaz",
-      "email": "13fenrill13666@gmail.com",
-      "password": "sdfewhrhfwef"
-    },
-    {
-      "id": "372d",
-      "name": "Sergo_Kaz",
-      "email": "wwe619dx@ukr.net",
-      "password": "fwfwefwefsdfsfwefwf"
-    },
-    {
-      "id": "2ec6",
-      "name": "Sergo_Kaz",
-      "email": "tanyaborisenko98@gmail.com",
-      "password": "sdfwefwfwefwef"
-    },
-    {
-      "id": "1533",
-      "name": "Sergo_Kaz",
-      "email": "tanyaborisenko98@gmail.com",
-      "password": "sdfwefwfwefwef"
-    },
-    {
-      "id": "f32f",
-      "name": "Sergo_Kaz",
-      "email": "13fenrill13666@gmail.com",
-      "password": "fefwefwefwefwe"
-    },
-    {
-      "id": "fbac",
+      "id": "6df9",
       "name": "",
       "email": "",
       "password": ""

@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { postData } from "../../api";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 import style from "./TodoForms.module.css";
 
-const TodoForms = ({ userItem, setUserItem, userItems, setUserItems }) => {
+const TodoForms = () => {
+  const { userItems, setUserItems, userItem, setUserItem } =
+    useContext(MyIsAuthenticated);
+
   const handleSubmit = (event) => {
     event.preventDefault();
   };

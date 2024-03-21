@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-
 import useForm from "../../useForm";
 import { registrationNewUser } from "../../api";
 
-const RegistrationPage = ({ setIsAuthenticated }) => {
+import style from "./RegistrationPage.module.css";
+
+const RegistrationPage = ({ setIsAuthenticated, setToggleAuthentication }) => {
   const { values, handleChange, handleSubmit } = useForm(
     {
       name: "",
@@ -14,9 +14,13 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
     setIsAuthenticated
   );
 
+  const handleClickToggle = () => {
+    setToggleAuthentication((prev) => !prev);
+  };
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={style.blockForm}>
+      <form className={style.form} onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
@@ -46,10 +50,9 @@ const RegistrationPage = ({ setIsAuthenticated }) => {
         </div>
         <button type="submit">Register</button>
       </form>
-
-      <Link to="/login" replace>
+      <button onClick={handleClickToggle} className={style.btnSignUp}>
         Sing in
-      </Link>
+      </button>
     </div>
   );
 };

@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { deleteData, putData } from "../../api";
 import { Link } from "react-router-dom";
 
 import style from "./TodoItem.module.css";
+import { MyIsAuthenticated } from "../../context/MyIsAuthenticated";
 
-const TodoItem = ({ item, setUserData, userData, userItems, setUserItems }) => {
+const TodoItem = ({ item }) => {
+  const { userItems, setUserItems } = useContext(MyIsAuthenticated);
+
   const [itemData, setItemData] = useState(item);
   const [deleteStatus, setDeleteStatus] = useState(false);
-  // const [editItem, setEditItem] = useState(true);
-  // const [editInput, setEditInput] = useState("");
 
   const handleCheckboxChange = () => {
     setUserItems(
@@ -33,32 +34,13 @@ const TodoItem = ({ item, setUserData, userData, userItems, setUserItems }) => {
 
     setTimeout(() => {
       if (status.status) {
-        setUserData(userData.filter((item) => item.id !== id));
+        setUserItems(userItems.filter((item) => item.id !== id));
       } else {
         alert(status.error);
       }
       setDeleteStatus(false);
     }, 500);
   };
-
-  // const handleEditItem = () => {
-  //   setEditItem(false);
-  //   setEditInput(itemData.value);
-  // };
-
-  // const handleSaveItem = () => {
-  //   setEditItem(true);
-  // };
-
-  // const saveEditItem = () => {
-  //   setItemData({ ...itemData, value: editInput });
-
-  //   console.log(itemData);
-  // };
-
-  // const handleChangeInput = (event) => {
-  //   setEditInput(event.target.value);
-  // };
 
   return (
     <li className={style.todoItem}>
