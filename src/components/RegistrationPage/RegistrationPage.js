@@ -28,6 +28,7 @@ const RegistrationPage = ({ setIsAuthenticated, setToggleAuthentication }) => {
             value={values.name}
             onChange={handleChange}
             placeholder="user name"
+            required
           />
         </div>
         <div>
@@ -37,6 +38,7 @@ const RegistrationPage = ({ setIsAuthenticated, setToggleAuthentication }) => {
             value={values.email}
             onChange={handleChange}
             placeholder="email"
+            required
           />
         </div>
         <div>
@@ -46,6 +48,7 @@ const RegistrationPage = ({ setIsAuthenticated, setToggleAuthentication }) => {
             value={values.password}
             onChange={handleChange}
             placeholder="password"
+            required
           />
         </div>
         <button type="submit">Register</button>

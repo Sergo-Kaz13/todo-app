@@ -23,52 +23,10 @@
   ],
   "users": [
     {
-      "id": "eb90",
+      "id": "71d6",
       "name": "",
       "email": "",
       "password": ""
-    },
-    {
-      "id": "ada3",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "13ef",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "7462",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "3c25",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "fd7c",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "6df9",
-      "name": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "98f3",
-      "name": "Sergo_Kaz",
-      "email": "fenrill1366613@gmail.com",
-      "password": "dffwewfwefsafsdgweg"
     }
   ]
 }
